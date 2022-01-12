@@ -5,12 +5,13 @@
     <artifactId>javaproject</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>practice01</artifactId>
-  
+  <artifactId>data-structure</artifactId>
+	  
+	<dependencies>
+	</dependencies>
 	
 	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
-		<finalName>practice01</finalName>
-	</build>  
-  
+		<finalName>data-structure</finalName>
+	</build>
+
 </project>
