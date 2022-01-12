@@ -32,7 +32,6 @@ public class CalcApp {
 					add.setValue( lValue, rValue );
 					int result = add.calculate();
 					System.out.println( ">> " + result );
-					
 					break;
 				}
 				case "-" : {
@@ -40,7 +39,6 @@ public class CalcApp {
 					sub.setValue( lValue, rValue );
 					int result = sub.calculate();
 					System.out.println( ">> " + result );
-					
 					break;
 				}
 				case "*" : {
@@ -48,7 +46,6 @@ public class CalcApp {
 					mul.setValue( lValue, rValue );
 					int result = mul.calculate();
 					System.out.println( ">> " + result );
-					
 					break;					
 				}
 				case "/" : {
@@ -56,7 +53,6 @@ public class CalcApp {
 					div.setValue( lValue, rValue );
 					int result = div.calculate();
 					System.out.println( ">> " + result );
-					
 					break;
 				}
 				default :  {
