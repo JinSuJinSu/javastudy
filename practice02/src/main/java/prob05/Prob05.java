@@ -8,25 +8,44 @@ public class Prob05 {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner( System.in );
 
-		while( true ) {
-			
-			/* 게임 작성 */
-
-			// 정답 램덤하게 만들기
-			Random random = new Random();
-			int correctNumber = random.nextInt( 100 ) + 1;
-			System.out.println(correctNumber);
-
-			
-			//새 게임 여부 확인하기
-			System.out.print( "다시 하겠습니까(y/n)>>" );
-			String answer = scanner.next();
-			if( "y".equals( answer ) == false ) {
-				break;
-			}
-		}
+		Random random = new Random();
+		int correctNumber = random.nextInt( 100 ) + 1;
+		System.out.println("수를 결정하셨습니다. 맞추어 보세요");
+		int startNum=1;
 		
+		while(true) {
+			System.out.println("1-100");
+			System.out.print(startNum + ">>");
+			int myNum = scanner.nextInt();
+			if(myNum>correctNumber) {
+				System.out.println("더 낮게");
+			}
+			else if(myNum<correctNumber){
+				System.out.println("더 높게");
+			
+			}
+			else {
+				System.out.println("맞았습니다.");
+				System.out.println("다시하시겠습니까(y/n)>>");
+				String condition = scanner.next();
+				if(condition.equals("y")) {
+					startNum=1;
+					correctNumber = random.nextInt(100) + 1;
+					System.out.println("수를 결정하셨습니다. 맞추어 보세요");
+				}
+				else if(condition.equals("n")) {
+					System.out.println("게임 종료합니다.");
+					break;
+				}
+				else {
+					System.out.println("게임 종료합니다.");
+					break;
+				}
+			}
+			startNum+=1;
+	}
 		scanner.close();
 	}
-
 }
+
+	
